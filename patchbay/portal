@@ -1,0 +1,199 @@
+$backgroundPrimary {
+  font-size: 16px;
+  background-color: #111;
+}
+
+App { 
+  $backgroundPrimary
+  /* main font color */
+  color: #ccc;
+
+  font-family: abel, sans-serif;
+  font-size: 17px;
+
+  /* bg color of main app border & unselected tabs */
+  --app-border-background: #111;
+
+  /* bg color of unselected navbar tabs on hover */
+  --app-border-background-mid: #111;
+
+  /* bg color of main app window */
+  --page-background: #111;
+
+  /* font color of selected tab */
+  --page-color: #ff6300;
+
+  /* color of scrollbar block-marker */
+  --scrollbar-color: #333;
+
+  /* hover color of scrollbar block-marker */
+  --scrollbar-color-hover: #333;
+}
+
+Page -channel {
+  /* bg color for channels */
+  background-color: #111;
+}
+
+SettingsPage {
+  div.container {
+    /* bg color of settings content block */
+    background-color: #111;
+  }
+}
+
+Message -default {
+  section.top {
+    div.author {
+      (a) {
+        /* font color of author name in posts */
+        color: #859900;
+        /* control underline on hover of author name in posts */
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+Message -default {
+  section.bottom {
+    div.actions {
+      a {
+        color: #555;
+      }
+    }
+  }
+}
+
+/* styling for the public post submission box when not active */
+Compose -contracted {
+  textarea {
+    background-color: #111;
+    border: 2px solid #cb4b16;
+  }
+}
+
+/* styling for the public post submission box when active */
+Compose -expanded {
+  textarea {
+    background-color: #111;
+    border: 2px solid #cb4b16;
+  }
+}
+
+Compose {
+  input.channel {
+    background-color: #111;
+    border: 2px solid #cb4b16;
+    border-bottom: none;
+    border-radius: 10px;
+  }
+  textarea {
+    border-radius: 10px;
+  }
+}
+
+button {
+  /* these styles are for New buttons */
+  -primary {
+    color: #cb4b16;
+    background-color: #073642;
+    border: 1px solid #cb4b16;
+
+    :hover {
+      color: #fdf6e3;
+      background-color: #cb4b16;
+      border: none;
+    }
+  }
+
+  /* these styles are for Reply, Refresh, Publish, and Apply Styles buttons */
+  color: #cb4b16;
+  background-color: #073642;
+  border: 1px solid #cb4b16;
+
+  :hover {
+    color: #fdf6e3;
+    background-color: #cb4b16;
+    border: none;
+  }
+}
+
+Markdown {
+
+  /* font color of links in posts */
+  p {
+    a { color: #777 }
+  }
+
+  /* style of code blocks (made using backticks) */
+  p code {
+    color: #dc322f;
+    background-color: #111;
+    border: none;
+    /* font-weight: bolder; */
+  }
+
+  /* bg color of posts */
+  background-color: #111;
+
+  /* style of blockquotes */
+  blockquote {
+    /* color of blockquote text */
+    color: #cb4b16;
+    /* size of blockquote text */
+    font-size: 18px;
+  }
+
+  pre {
+    background-color: #111;
+    color: #333;
+  }
+
+  pre {
+    code {
+      background-color: #111;
+      color: #333;
+    }
+  }
+
+  (img) {
+    filter: opacity(.8)
+    transition: filter 0.2s ease-in
+
+    :hover {
+      filter: opacity(1)
+    }
+}
+
+ThreadCard {
+  section.authored {
+    div.name {
+      a {
+        color: #859900;
+      }
+    }
+  }
+}
+
+Hypertabs { 
+  nav {
+    background: none;
+    
+    section.content {
+      background-color: #073642;
+    }
+
+    section.tabs {
+      
+      div.tab {
+        border: 2px solid #073642
+
+        -selected  {
+         background: none
+         $backgroundPrimary
+          a { color: #d33682 } 
+        }
+      }
+   }
+}
