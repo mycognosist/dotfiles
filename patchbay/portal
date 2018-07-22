@@ -1,3 +1,8 @@
+/* COLORS */
+/* orange - #cb4b16 (dark solarized) */
+/* red - #dc322f (dark solarized) */
+/* violet - #6c71c4 (dark solarized) */
+
 $backgroundPrimary {
   font-size: 16px;
   background-color: #111;
@@ -30,14 +35,221 @@ App {
   --scrollbar-color-hover: #333;
 }
 
-Page -channel {
-  /* bg color for channels */
-  background-color: #111;
+Compose {
+  input.channel {
+    background-color: #111;
+    border: 2px solid #cb4b16;
+    border-bottom: none;
+    border-radius: 10px;
+  }
+  textarea {
+    border-radius: 10px;
+  }
+}
+
+/* styling for the public post submission box when not active */
+Compose -contracted {
+  textarea {
+    background-color: #111;
+    border: 2px solid #cb4b16;
+  }
+}
+
+/* styling for the public post submission box when active */
+Compose -expanded {
+  input.channel {
+    /* set background color of read-only channel name above message input */
+    background-color: #111;
+  }
+  textarea {
+    color: #ccc;
+    background-color: #111;
+    border: 2px solid #cb4b16;
+  }
+  section.warning {
+    background-color: #111;
+  }
+  section.actions  {
+    button {
+      color: #cb4b16;
+      background-color: #111;
+      border: 1px solid #cb4b16;
+      border-radius: 10px;
+    
+      :hover {
+        color: #fdf6e3;
+        background-color: #cb4b16;
+        border: none;
+      }
+    }
+  }
+}
+
+Composer {
+  /* NOT WORKING - mean't for 'You are not a recipient' warning msg */
+  section.one-way {
+    color: #dc322f;
+  }
+
+  section.actions {
+    div.actions {
+      button.-subtle {
+        color: #cb4b16;
+        background-color: #000;
+        border: 1px solid #cb4b16;
+        border-radius: 10px;
+
+        :hover {
+          color: #fdf6e3;
+          background-color: #cb4b16;
+          border: none;
+        }
+      }
+
+     button.-primary {
+        color: #cb4b16;
+        background-color: #000;
+        border: 1px solid #cb4b16;
+        border-radius: 10px;
+
+        :hover {
+          color: #fdf6e3;
+          background-color: #cb4b16;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+CustomStyles {
+  /* styling for /settings page */
+  textarea {
+    color: #ccc;
+    background-color: #111;
+  }
+
+  button {
+    color: #cb4b16;
+    background-color: #111;
+    border: 1px solid #cb4b16;
+    border-radius: 10px;
+    
+    :hover {
+      color: #fdf6e3;
+      background-color: #cb4b16;
+      border: none;
+    }
+  }
+}
+
+Filter {
+  /* set font color of filter settings */
+  color: #cb4b16;
+
+  /* 
+  div.options {
+    background-color: #111;
+    border: none;
+  }
 }
 
 SettingsPage {
   div.container {
     /* bg color of settings content block */
+    background-color: #111;
+  }
+}
+
+Menu {
+  /* color of menu dot in top-right */
+  background-color: #859900;
+}
+
+Menu -open {
+  div {
+    background-color: #111;
+  
+    a {
+      background-color: #111;
+      color: #555;
+
+      :hover {
+        color: #cb4b16;
+      }
+    }
+  }
+}
+
+Menu  -open {
+  background-color: #111;
+
+  div {
+    background: #111;
+  }
+}
+
+Relationships {
+  div.your-status {
+    /* style the 'Follow' button on a profile */
+    section.-friendship {
+      button {
+        color: #cb4b16;
+        background-color: #111;
+        border: 1px solid #cb4b16;
+        border-radius: 10px;
+
+        :hover {
+          color: #fdf6e3;
+          background-color: #cb4b16;
+          border: none;
+        }
+      }
+    }
+
+    /* style the 'Block' button on a profile */
+    section.-blocking {
+      button {
+        color: #cb4b16;
+        background-color: #111;
+        border: 1px solid #cb4b16;
+        border-radius: 10px;
+
+        :hover {
+          color: #fdf6e3;
+          background-color: #cb4b16;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+Scroller Thread {
+  section.top {
+    section.info.-warning {
+      color: #dc322f;
+    }
+  }
+}
+
+Modal -dark -open {
+  /* set background color & opacity for area surrounding the modal */
+  background: rgba(17, 17, 17, 0.5);
+}
+
+Page -channel {
+  /* bg color for channels */
+  background-color: #111;
+}
+
+Page -imageSearch {
+  /* set background color of main window in /imageSearch */
+  background-color: #111;
+}
+
+Modal {
+  div.content {
     background-color: #111;
   }
 }
@@ -52,10 +264,13 @@ Message -default {
         text-decoration: none;
       }
     }
+    /* font color of channel name in posts (top-right) */
+    div.meta {
+      a.channel {
+        color: #6c71c4;
+      }
+    }
   }
-}
-
-Message -default {
   section.bottom {
     div.actions {
       a {
@@ -63,67 +278,168 @@ Message -default {
       }
     }
   }
-}
-
-/* styling for the public post submission box when not active */
-Compose -contracted {
-  textarea {
-    background-color: #111;
-    border: 2px solid #cb4b16;
-  }
-}
-
-/* styling for the public post submission box when active */
-Compose -expanded {
-  textarea {
-    background-color: #111;
-    border: 2px solid #cb4b16;
-  }
-}
-
-Compose {
-  input.channel {
-    background-color: #111;
-    border: 2px solid #cb4b16;
-    border-bottom: none;
-    border-radius: 10px;
-  }
-  textarea {
-    border-radius: 10px;
-  }
-}
-
-button {
-  /* these styles are for New buttons */
-  -primary {
-    color: #cb4b16;
-    background-color: #073642;
-    border: 1px solid #cb4b16;
-
-    :hover {
-      color: #fdf6e3;
-      background-color: #cb4b16;
-      border: none;
+  section.content {
+    div {
+      div.Markdown {
+        blockquote {
+          color: #cb4b16;
+        }
+        pre {
+          /* color of code block div */
+          background-color: #111;
+          code {
+            /* font color of code blocks */
+            color: #dc322f;
+            /* color of code background */
+            background-color: #111;
+          }
+        }
+      }
     }
   }
+}
 
-  /* these styles are for Reply, Refresh, Publish, and Apply Styles buttons */
-  color: #cb4b16;
-  background-color: #073642;
-  border: 1px solid #cb4b16;
+Message -book-card {
+  /* set font color of book description in /books */
+  section.content {
+    color: #ccc;
+  }
+}
 
-  :hover {
-    color: #fdf6e3;
-    background-color: #cb4b16;
+Message -mini {
+  header.author {
+    div {
+      a {
+        color: #859900;
+      }
+    }
+  }
+  /* set font color of cypherlinks in the activity feed of profiles */
+  section.content {
+    a {
+      color: #268bd2;
+      
+      :hover {
+        text-decoration: hover;
+      }
+    }
+  }
+  /* set font color of channel name in the activity feed of profiles */
+  section.meta {
+    a.channel {
+      color: #6c71c4;
+    }
+  }
+}
+
+div.MessageConfirm {
+  header.-preview_description {
+    h1 {
+      color: #e6e6e6;
+    }
+  }
+}
+
+Posts {
+  section.top {
+    section.viewSettings {
+      div.sort {
+        button {
+          color: #cb4b16;
+          background-color: #111;
+          border: 1px solid #cb4b16;
+          border-radius: 10px;
+    
+         :hover {
+            color: #fdf6e3;
+            background-color: #cb4b16;
+            border: none;
+          }
+        }
+      }
+      div.show {
+        div.toggle {
+          i {
+            color: #cb4b16;
+          }
+        }
+      }
+    }
+  }
+}
+
+SearchBar {
+  input {
+    background-color: #111;
+    color: #859900;
     border: none;
+  }
+}
+
+Scroller {
+  section.top {
+    /* set style for the Unsubscribe From Channel button in /inbox */
+    button {
+      color: #cb4b16;
+      background-color: #111;
+      border: 1px solid #cb4b16;
+      border-radius: 10px;
+    
+      :hover {
+        color: #fdf6e3;
+        background-color: #cb4b16;
+        border: none;
+      }
+    }
+  }
+}
+
+Scroller Inbox {
+  section.top {
+    div.actions {
+      /* set style for the New button in /inbox */
+      button {
+        color: #cb4b16;
+        background-color: #111;
+        border: 1px solid #cb4b16;
+        border-radius: 10px;
+    
+        :hover {
+          color: #fdf6e3;
+          background-color: #cb4b16;
+          border: none;
+        }
+      }
+    /* set style for the Refresh button in /inbox */
+    div.refresh {
+      button {
+        color: #cb4b16;
+        background-color: #111;
+        border: 1px solid #cb4b16;
+        border-radius: 10px;
+    
+        :hover {
+          color: #fdf6e3;
+          background-color: #cb4b16;
+          border: none;
+        }
+      }
+    }
   }
 }
 
 Markdown {
 
+  /* font color of links in lists */
+  ul {
+    li {
+      color: #268bd2;
+    }
+  }
+
   /* font color of links in posts */
   p {
-    a { color: #777 }
+    a { color: #268bd2; }
   }
 
   /* style of code blocks (made using backticks) */
@@ -158,12 +474,13 @@ Markdown {
   }
 
   (img) {
-    filter: opacity(.8)
-    transition: filter 0.2s ease-in
+    filter: opacity(.8);
+    transition: filter 0.2s ease-in;
 
     :hover {
-      filter: opacity(1)
+      filter: opacity(1);
     }
+  }
 }
 
 ThreadCard {
@@ -183,17 +500,27 @@ Hypertabs {
     section.content {
       background-color: #073642;
     }
-
+    
     section.tabs {
-      
       div.tab {
         border: 2px solid #073642
 
         -selected  {
-         background: none
-         $backgroundPrimary
+          background: none
+          $backgroundPrimary
           a { color: #d33682 } 
         }
       }
-   }
+    }
+  }
+}
+
+/* doesn't work */
+body {
+  div.lightbox {
+    color: #ccc;
+    background-color: #111;
+    border: 2px solid #cb4b16;
+    border-radius: 1em;
+  }
 }
