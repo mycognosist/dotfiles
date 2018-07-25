@@ -20,7 +20,7 @@ App {
   --app-border-background: #111;
 
   /* bg color of unselected navbar tabs on hover */
-  --app-border-background-mid: #111;
+  --app-border-background-mid: #222;
 
   /* bg color of main app window */
   --page-background: #111;
@@ -154,6 +154,24 @@ Filter {
   }
 }
 
+Markdown {
+  blockquote {
+    color: #cb4b16;
+  }
+  p {
+    /* color of code block div */
+    background-color: #111;
+    code {
+      /* font color of code blocks */
+      color: #dc322f;
+      /* color of code background */
+      background-color: #111;
+      /* border of code blocks */
+      border: none;
+    }
+  }
+}
+
 SettingsPage {
   div.container {
     /* bg color of settings content block */
@@ -278,25 +296,6 @@ Message -default {
       }
     }
   }
-  section.content {
-    div {
-      div.Markdown {
-        blockquote {
-          color: #cb4b16;
-        }
-        pre {
-          /* color of code block div */
-          background-color: #111;
-          code {
-            /* font color of code blocks */
-            color: #dc322f;
-            /* color of code background */
-            background-color: #111;
-          }
-        }
-      }
-    }
-  }
 }
 
 Message -book-card {
@@ -372,7 +371,7 @@ SearchBar {
   input {
     background-color: #111;
     color: #859900;
-    border: none;
+    border: 1px solid #ccc;
   }
 }
 
