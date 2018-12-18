@@ -151,6 +151,7 @@ Filter {
 
 Markdown {
   p { em { a {color: #d33682; text-decoration: none; } } }
+  ol { li { a {color: #d33682; text-decoration: none; } } }
   ul { li { a {color: #d33682; text-decoration: none; } } }
   ul { li { ul { li { a {color: #d33682; text-decoration: none; } } } } }
   background-color: #111;
@@ -167,7 +168,9 @@ Markdown {
     }
   }
   blockquote {
+    font-size: 16px;
     color: #cb4b16;
+    p { a { color: #d33682; text-decoration: none; } }
   }
   p {
     /* color of code block div */
@@ -554,15 +557,5 @@ Hypertabs {
         }
       }
     }
-  }
-}
-
-/* doesn't work */
-body {
-  div.lightbox {
-    color: #ccc;
-    background-color: #111;
-    border: 2px solid #cb4b16;
-    border-radius: 1em;
   }
 }
