@@ -33,7 +33,7 @@ App {
 Compose {
   input.channel {
     background-color: #111;
-    border: 2px solid #cb4b16;
+    border: 2px solid #222;
     border-bottom: none;
     border-radius: 10px;
   }
@@ -46,7 +46,7 @@ Compose {
 Compose -contracted {
   textarea {
     background-color: #111;
-    border: 2px solid #cb4b16;
+    border: 2px solid #222;
   }
 }
 
@@ -59,21 +59,21 @@ Compose -expanded {
   textarea {
     color: #ccc;
     background-color: #111;
-    border: 2px solid #cb4b16;
+    border: 2px solid #222;
   }
   section.warning {
     background-color: #111;
   }
   section.actions  {
     button {
-      color: #cb4b16;
+      color: #ccc;
       background-color: #111;
-      border: 1px solid #cb4b16;
+      border: 1px solid #222;
       border-radius: 10px;
     
       :hover {
-        color: #fdf6e3;
-        background-color: #cb4b16;
+        color: #111;
+        background-color: #ddd;
         border: none;
       }
     }
@@ -89,27 +89,27 @@ Composer {
   section.actions {
     div.actions {
       button.-subtle {
-        color: #cb4b16;
+        color: #ccc;
         background-color: #000;
-        border: 1px solid #cb4b16;
+        border: 1px solid #222;
         border-radius: 10px;
 
         :hover {
-          color: #fdf6e3;
-          background-color: #cb4b16;
+          color: #111;
+          background-color: #ddd;
           border: none;
         }
       }
 
      button.-primary {
-        color: #cb4b16;
-        background-color: #000;
-        border: 1px solid #cb4b16;
+        color: #ccc;
+        background-color: #111;
+        border: 1px solid #222;
         border-radius: 10px;
 
         :hover {
-          color: #fdf6e3;
-          background-color: #cb4b16;
+          color: #111;
+          background-color: #ddd;
           border: none;
         }
       }
@@ -125,14 +125,14 @@ CustomStyles {
   }
 
   button {
-    color: #cb4b16;
+    color: #ccc;
     background-color: #111;
-    border: 1px solid #cb4b16;
+    border: 1px solid #222;
     border-radius: 10px;
     
     :hover {
-      color: #fdf6e3;
-      background-color: #cb4b16;
+      color: #111;
+      background-color: #ddd;
       border: none;
     }
   }
@@ -140,7 +140,7 @@ CustomStyles {
 
 Filter {
   /* set font color of filter settings */
-  color: #cb4b16;
+  color: #ccc;
 
   /* 
   div.options {
@@ -168,6 +168,8 @@ Markdown {
     }
   }
   blockquote {
+    background: #111;
+    border: none;
     font-size: 16px;
     color: #cb4b16;
     p { a { color: #d33682; text-decoration: none; } }
@@ -182,6 +184,11 @@ Markdown {
       background-color: #111;
       /* border of code blocks */
       border: none;
+    }
+    strong {
+      code {
+        color: #dc322f; background-color: #111; border: none;
+      }
     }
     a {
       color: #d33682;
@@ -248,17 +255,22 @@ Menu  -open {
 
 Relationships {
   div.your-status {
+    section.-blocking {
+      div.explainer {
+        background: #111;
+      }
+    }
     /* style the 'Follow' button on a profile */
     section.-friendship {
       button {
-        color: #cb4b16;
+        color: #ccc;
         background-color: #111;
-        border: 1px solid #cb4b16;
+        border: 1px solid #ccc;
         border-radius: 10px;
 
         :hover {
-          color: #fdf6e3;
-          background-color: #cb4b16;
+          color: #111;
+          background-color: #ccc;
           border: none;
         }
       }
@@ -267,14 +279,14 @@ Relationships {
     /* style the 'Block' button on a profile */
     section.-blocking {
       button {
-        color: #cb4b16;
+        color: #ccc;
         background-color: #111;
-        border: 1px solid #cb4b16;
+        border: 1px solid #ccc;
         border-radius: 10px;
 
         :hover {
-          color: #fdf6e3;
-          background-color: #cb4b16;
+          color: #111;
+          background-color: #ccc;
           border: none;
         }
       }
@@ -294,6 +306,11 @@ Modal -dark -open {
   /* set background color & opacity for area surrounding the modal */
   background: rgba(17, 17, 17, 0.5);
 }
+
+body { div.lightbox {
+  background: #111;
+  border: 1px solid #ccc;
+} }
 
 Page -channel {
   /* bg color for channels */
@@ -377,27 +394,55 @@ Message -mini {
 }
 
 div.MessageConfirm {
-  background-color: #ffffff;
+  background-color: #111;
   header.-preview_description {
     h1 {
-      color: #111111;
+      color: #ccc;
+    }
+  }
+  section.-message_preview {
+    background-color: #111;
+  }
+  section.-actions {
+    button {
+      color: #ccc;
+      background-color: #111;
+      border: 1px solid #222;
+
+      :hover {
+        color: #111;
+        background-color: #ccc;
+        border: none;
+      }
     }
   }
 }
+
+Relationships {
+  div.your-status {
+    section.-blocking {
+      div.explainer {
+        background: #111;
+      }
+    }
+  }
+}
+
+div.count { color: #111; }
 
 Posts {
   section.top {
     section.viewSettings {
       div.sort {
         button {
-          color: #cb4b16;
+          color: #ccc;
           background-color: #111;
-          border: 1px solid #cb4b16;
+          border: 1px solid #ccc;
           border-radius: 10px;
     
          :hover {
-            color: #fdf6e3;
-            background-color: #cb4b16;
+            color: #111;
+            background-color: #ccc;
             border: none;
           }
         }
@@ -425,14 +470,14 @@ Scroller {
   section.top {
     /* set style for the Unsubscribe From Channel button in /inbox */
     button {
-      color: #cb4b16;
+      color: #ccc;
       background-color: #111;
-      border: 1px solid #cb4b16;
+      border: 1px solid #ccc;
       border-radius: 10px;
     
       :hover {
-        color: #fdf6e3;
-        background-color: #cb4b16;
+        color: #111;
+        background-color: #ccc;
         border: none;
       }
     }
@@ -444,28 +489,28 @@ Scroller Inbox {
     div.actions {
       /* set style for the New button in /inbox */
       button {
-        color: #cb4b16;
+        color: #ccc;
         background-color: #111;
-        border: 1px solid #cb4b16;
+        border: 1px solid #ccc;
         border-radius: 10px;
     
         :hover {
-          color: #fdf6e3;
-          background-color: #cb4b16;
+          color: #111;
+          background-color: #ccc;
           border: none;
         }
       }
     /* set style for the Refresh button in /inbox */
     div.refresh {
       button {
-        color: #cb4b16;
+        color: #ccc;
         background-color: #111;
-        border: 1px solid #cb4b16;
+        border: 1px solid #ccc;
         border-radius: 10px;
     
         :hover {
-          color: #fdf6e3;
-          background-color: #cb4b16;
+          color: #111;
+          background-color: #ccc;
           border: none;
         }
       }
@@ -515,15 +560,6 @@ Markdown {
     code {
       background-color: #111;
       color: #333;
-    }
-  }
-
-  (img) {
-    filter: opacity(.8);
-    transition: filter 0.2s ease-in;
-
-    :hover {
-      filter: opacity(1);
     }
   }
 }
