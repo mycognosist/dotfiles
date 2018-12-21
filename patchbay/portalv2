@@ -138,7 +138,12 @@ ExternalConfirm {
   }
 }
 
-GatheringCard { div.details { color: #ccc; } }
+GatheringCard {
+  div.details {
+    color: #ccc;
+    border: none;
+  }
+}
 
 CustomStyles {
   /* styling for /settings page */
