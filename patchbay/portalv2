@@ -115,6 +115,29 @@ Composer {
   }
 }
 
+ExternalConfirm {
+  header {
+    color: #ccc;
+  }
+  section.prompt {
+    font-size: 16px; color: #ccc; background: #111;
+    pre.link { background: #111; color: #d33682; }
+  }
+  section.actions {
+    button {
+      color: #ccc;
+      background: #111;
+      border: 1px solid #222;
+
+      :hover {
+        color: #111;
+        background-color: #ddd;
+        border: none;
+      }
+    }
+  }
+}
+
 CustomStyles {
   /* styling for /settings page */
   textarea {
