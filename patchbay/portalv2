@@ -138,6 +138,8 @@ ExternalConfirm {
   }
 }
 
+GatheringCard { div.details { color: #ccc; } }
+
 CustomStyles {
   /* styling for /settings page */
   textarea {
